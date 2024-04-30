@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native';
 
 export default function App() {
+  console.log('HOla')
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <TouchableWithoutFeedback
+        onPress={()=> Alert.alert('Hemos tocado el texto')}>
+        <Text>Hola mundo!</Text>
+      </TouchableWithoutFeedback>      
       <StatusBar style="auto" />
     </View>
   );
